@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}หน้าแรก - เว็บไซต์ของฉัน{% endblock %}
+
+{% block content %}
+  <!-- ส่วน Hero -->
+  <div class="relative bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-600 min-h-screen flex items-center justify-center text-center text-white">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10">
+      <h1 class="text-5xl font-bold mb-4">ยินดีต้อนรับสู่ระบบจัดการสินค้า</h1>
+      <p class="text-xl mb-8">แพลตฟอร์มครบวงจรสำหรับการจัดการสินค้า การติดตามคำสั่งซื้อ และข้อมูลลูกค้าได้อย่างมีประสิทธิภาพ</p>
+      <a href="{% url 'login' %}" class="inline-block px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition duration-300">
+        เริ่มต้นใช้งาน
+      </a>
+    </div>
+  </div>
+
+  <!-- ส่วนคุณสมบัติ -->
+  <div class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-8">คุณสมบัติของเรา</h2>
+      <p class="text-lg text-gray-700 mb-12">ระบบจัดการสินค้าของเราช่วยให้คุณสามารถจัดการสินค้า ติดตามคำสั่งซื้อ และดูแลระดับสต็อกทั้งหมดในที่เดียว</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-indigo-600 mb-4">การจัดการสินค้า</h3>
+          <p class="text-gray-700">เพิ่ม แก้ไข และลบสินค้าได้ง่าย ๆ ติดตามสินค้าคงคลัง และทำการปรับเปลี่ยนได้ทันที</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-indigo-600 mb-4">การติดตามคำสั่งซื้อ</h3>
+          <p class="text-gray-700">จัดการคำสั่งซื้อจากลูกค้า ประมวลผลคำสั่งซื้ออย่างมีประสิทธิภาพ และอัพเดตสถานะคำสั่งซื้อให้ลูกค้าทราบตลอดเวลา</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-indigo-600 mb-4">การตรวจสอบสต็อก</h3>
+          <p class="text-gray-700">ติดตามระดับสต็อก รับการแจ้งเตือนเมื่อสินค้าคงคลังต่ำ และรักษาความพร้อมในการจัดหาสินค้าได้โดยไม่ต้องกังวลเรื่องขาดแคลน</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ส่วนการกระตุ้นให้เข้าร่วม -->
+  <div class="bg-indigo-600 py-16 text-white text-center">
+    <h2 class="text-3xl font-semibold mb-4">เข้าร่วมกับเราวันนี้</h2>
+    <p class="text-xl mb-8">เริ่มต้นใช้งานตอนนี้และควบคุมการจัดการสินค้าของคุณและคำสั่งซื้อได้อย่างง่ายดาย</p>
+    <a href="{% url 'register' %}" class="inline-block px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-200 transition duration-300">
+      สมัครสมาชิกตอนนี้
+    </a>
+  </div>
+
+  <!-- ส่วน Footer -->
+  <footer class="py-8 bg-gray-800 text-white text-center">
+    <p>&copy; 2024 เว็บไซต์ของฉัน. สงวนลิขสิทธิ์ทั้งหมด.</p>
+  </footer>
+
+{% endblock %}
